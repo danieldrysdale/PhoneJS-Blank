@@ -15,19 +15,24 @@
             navigationType: "navbar",
             navigation: [
               {
-                title: "Home",
-                action: "#home",
-                icon: "home"
+                title: "Calculator",
+                action: "#calculator",
+                icon: "doc"
               },
+                {
+                    title: "About",
+                    action: "#about",
+                    icon: "info"
+                },
               {
-                title: "About",
-                action: "#about",
-                icon: "info"
+                title: "Help",
+                action: "#help",
+                icon: "help"
               }
             ]
         });
         
-        MyApp.app.router.register(":view", { view: "home" });
+        MyApp.app.router.register(":view", { view: "calculator" });
         MyApp.app.navigate();
     });
     
