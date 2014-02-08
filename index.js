@@ -15,7 +15,7 @@
             navigationType: "navbar",
             navigation: [
               {
-                title: "Calculator",
+                title: "P.I. Calculator",
                 action: "#calculator",
                 icon: "doc"
               },
