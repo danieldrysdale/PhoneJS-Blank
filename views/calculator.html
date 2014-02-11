@@ -1,92 +1,22 @@
-﻿<!--<div data-options="dxView : { name: 'calculator', title: 'Calculator' } " >-->
 <div data-options="dxView : { name: 'calculator', title: 'Permanent Impairment Calculator' }">
 
     <div data-options="dxContent : { targetPlaceholder: 'content' }">
-        <div data-bind="dxScrollView: { }" class="main-content">
-
-            <div class="dx-fieldset">
-                <div class="dx-field">
-                    <div class="dx-field-label">Date of Assessment</div>
-                    <div class="dx-field-value">
-                        <div data-bind="dxDateBox: { format: 'date' }"></div>
-                    </div>
-                </div>
-                <div class="dx-field">
-                    <div class="dx-field-label">Whole person impairment %</div>
-                    <div class="dx-field-value">
-                        <div data-bind="dxNumberBox: { value: 0.0  }"></div>
-                    </div>
-                </div>
+        <div data-bind="dxList: { dataSource: form_items, grouped: true }">
+            <div data-options="dxTemplate: { name: 'group' }">
+                <b><span data-bind="text: key"></span></b>
             </div>
-
-            <div class="dx-fieldset">
-                <div class="dx-field">
-                    <span class="dx-field-label">Impairment Scores</span>
-                </div>
-                <div class="dx-field">
-                    <div class="dx-field-label">Pain</div>
-                    <div class="dx-field-value">
-                        <div data-bind="dxNumberBox: { value: 0  }"></div>
-                    </div>
-                </div>
-                <div class="dx-field">
-                    <div class="dx-field-label">Suffering</div>
-                    <div class="dx-field-value">
-                        <div data-bind="dxNumberBox: { value: 0  }"></div>
-                    </div>
-                </div>
-                <div class="dx-field">
-                    <div class="dx-field-label">Mobility</div>
-                    <div class="dx-field-value">
-                        <div data-bind="dxNumberBox: { value: 0  }"></div>
-                    </div>
-                </div>
-                <div class="dx-field">
-                    <div class="dx-field-label">Social relationship</div>
-                    <div class="dx-field-value">
-                        <div data-bind="dxNumberBox: { value: 0  }"></div>
-                    </div>
-                </div>
-                <div class="dx-field">
-                    <div class="dx-field-label">Recreation & leisure</div>
-                    <div class="dx-field-value">
-                        <div data-bind="dxNumberBox: { value: 0  }"></div>
-                    </div>
-                </div>
-                <div class="dx-field">
-                    <div class="dx-field-label">Other loss</div>
-                    <div class="dx-field-value">
-                        <div data-bind="dxNumberBox: { value: 0  }"></div>
-                    </div>
-                </div>
-                <div class="dx-field">
-                    <div class="dx-field-label">Loss of expectation of life</div>
-                    <div class="dx-field-value">
-                        <div data-bind="dxNumberBox: { value: 0  }"></div>
-                    </div>
-                </div>
+            <div data-options="dxTemplate: { name: 'result_item' }">
+                <span class="dx-field-label" data-bind="text: label"></span>
+                <span class="dx-field-value" data-bind="value: 0"></span>
             </div>
-
-            <div class="dx-fieldset">
-                <div class="dx-field">
-                    <span class="dx-field-label">Results</span>
-                </div>
-                <div class="dx-field">
-                    <span class="dx-field-label">Section 24</span>
-                    <span class="dx-field-value">0</span>
-                </div>
-                <div class="dx-field">
-                    <span class="dx-field-label">Section 27</span>
-                    <span class="dx-field-value">0</span>
-                </div>
-                <div class="dx-field">
-                    <span class="dx-field-label">Grand total</span>
-                    <span class="dx-field-value">0</span>
-                </div>
+            <div data-options="dxTemplate: { name: 'date_item' }">
+                <span class="dx-field-label" data-bind="text: label"></span>
+                <span class="dx-field-value" data-bind="dxDateBox: { format: 'date'  }"></span>
             </div>
-
+            <div data-options="dxTemplate: { name: 'number_item' }">
+                <span class="dx-field-label" data-bind="text: label"></span>
+                <span class="dx-field-value" data-bind="dxNumberBox: { value: 0  }"></span>
+            </div>
         </div>
     </div>
 </div>
-
-
